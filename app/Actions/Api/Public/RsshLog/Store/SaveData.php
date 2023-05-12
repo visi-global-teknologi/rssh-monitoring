@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Actions\Api\Public\Ping\Store;
+namespace App\Actions\Api\Public\RsshLog\Store;
 
 use App\Models\Device;
-use App\Models\PingServer;
+use App\Models\RsshLog;
 use Illuminate\Http\Request;
+use App\Models\RsshConnection;
 
 class SaveData
 {
@@ -15,9 +16,11 @@ class SaveData
         if (is_null($device))
             throw new \Exception('device status is non active');
 
-        PingServer::create([
-            'date_time' => now(),
-            'device_id' => $device->id
+        $rsshConnection = RsshConnection::where('device_id', $device->id)->first();
+        RsshLog::create([
+            'log' => $request->log,
+            'is_error' => $request->is_error,
+            'rssh_connection_id' => $rsshConnection->id
         ]);
     }
 }
