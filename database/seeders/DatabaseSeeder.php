@@ -32,7 +32,7 @@ class DatabaseSeeder extends Seeder
 
             $device = Device::create([
                 'name' => 'bukaka point 1',
-                'unique_code' => Str::random(5),
+                'unique_code' => strtolower(Str::random(5)),
                 'description' => 'bukaka point 1',
                 'client_id' => $client->id,
             ]);
