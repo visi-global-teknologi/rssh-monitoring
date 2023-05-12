@@ -5,8 +5,10 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\Models\Client;
 use App\Models\Device;
-use Illuminate\Database\Seeder;
 use Illuminate\Support\Str;
+use App\Models\RsshConnection;
+use Illuminate\Database\Seeder;
+use App\Models\ConnectionStatus;
 
 class DatabaseSeeder extends Seeder
 {
@@ -30,9 +32,19 @@ class DatabaseSeeder extends Seeder
 
             $device = Device::create([
                 'name' => 'bukaka point 1',
-                'unique_code' => Str::random(40),
+                'unique_code' => Str::random(5),
                 'description' => 'bukaka point 1',
                 'client_id' => $client->id,
+            ]);
+
+            RsshConnection::create([
+                'server_username' => 'root',
+                'server_password' => 'fJ}2nWG$yV6ocyU$',
+                'server_ip' => '66.42.49.122',
+                'server_port' => '3387',
+                'local_port' => '3389',
+                'device_id' => $device->id,
+                'connection_status_id' => ConnectionStatus::where('name', 'not connected')->first()->id
             ]);
         }
     }
