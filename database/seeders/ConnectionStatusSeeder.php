@@ -2,9 +2,8 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Seeder;
 use App\Models\ConnectionStatus;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Seeder;
 
 class ConnectionStatusSeeder extends Seeder
 {
@@ -17,7 +16,7 @@ class ConnectionStatusSeeder extends Seeder
 
         foreach ($names as $value) {
             ConnectionStatus::create([
-                'name' => $value
+                'name' => $value,
             ]);
         }
     }

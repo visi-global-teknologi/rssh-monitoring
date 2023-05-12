@@ -11,25 +11,26 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  * Class PasswordResetToken
- * 
+ *
  * @property string $email
  * @property string $token
  * @property Carbon|null $created_at
- *
- * @package App\Models
  */
 class PasswordResetToken extends Model
 {
-	protected $table = 'password_reset_tokens';
-	protected $primaryKey = 'email';
-	public $incrementing = false;
-	public $timestamps = false;
+    protected $table = 'password_reset_tokens';
 
-	protected $hidden = [
-		'token'
-	];
+    protected $primaryKey = 'email';
 
-	protected $fillable = [
-		'token'
-	];
+    public $incrementing = false;
+
+    public $timestamps = false;
+
+    protected $hidden = [
+        'token',
+    ];
+
+    protected $fillable = [
+        'token',
+    ];
 }
