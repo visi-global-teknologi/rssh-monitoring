@@ -17,7 +17,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        \App\Models\User::factory()->create(config('rssh.seeder.user'));
+        $user = config('rssh.seeder.user');
+        $user['password'] = bcrypt('12345678');
+        \App\Models\User::factory()->create($user);
 
         $this->call(ConnectionStatusSeeder::class);
 

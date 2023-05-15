@@ -7,8 +7,7 @@ return [
     'seeder' => [
         'user' => [
             'name' => 'azil',
-            'email' => 'azil@visiglobalteknologi.co.id',
-            'password' => bcrypt('12345678'),
+            'email' => 'azil@visiglobalteknologi.co.id'
         ],
         'client' => [
             'name' => 'bukaka'
