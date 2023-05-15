@@ -10,7 +10,8 @@ return [
             'email' => 'azil@visiglobalteknologi.co.id'
         ],
         'client' => [
-            'name' => 'bukaka'
+            'name' => 'bukaka',
+            ''
         ],
         'device' => [
             'name' => 'bukaka point 1',
