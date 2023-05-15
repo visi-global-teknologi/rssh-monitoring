@@ -18,9 +18,15 @@ class SaveData
         if ('no' == $device->active_status)
             throw new \Exception('device status is non active');
 
-        PingServer::create([
-            'date_time' => now(),
-            'device_id' => $device->id
-        ]);
+        $pingServer = PingServer::where('device_id', $device->id)->first();
+        if ($pingServer) {
+            $pingServer->date_time = now();
+            $pingServer->save();
+        } else {
+            PingServer::create([
+                'date_time' => now(),
+                'device_id' => $device->id
+            ]);
+        }
     }
 }
