@@ -12,9 +12,9 @@ class ConnectionStatusSeeder extends Seeder
      */
     public function run(): void
     {
-        $names = ['connected', 'terminated', 'request terminate', 'disconnect'];
+        $names = config('rssh.seeder.connection_status');
 
-        foreach ($names as $value) {
+        foreach ($names as $key => $value) {
             ConnectionStatus::create([
                 'name' => $value,
             ]);

@@ -33,7 +33,7 @@ class DatabaseSeeder extends Seeder
                 'server_port' => '3387',
                 'local_port' => '3389',
                 'device_id' => $device->id,
-                'connection_status_id' => ConnectionStatus::where('name', config('rssh.connection_status.disconnect'))->first()->id
+                'connection_status_id' => ConnectionStatus::where('name', config('rssh.seeder.connection_status.disconnect'))->first()->id
             ]);
         }
     }

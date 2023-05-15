@@ -1,11 +1,13 @@
 <?php
 
 return [
-    'connection_status' => [
-        'request_terminate' => 'request terminate',
-        'disconnect' => 'disconnect'
-    ],
     'seeder' => [
+        'connection_status' => [
+            'request_terminate' => 'request terminate',
+            'disconnect' => 'disconnect',
+            'connected' => 'connected',
+            'terminated' => 'terminated'
+        ],
         'user' => [
             'name' => 'azil',
             'email' => 'azil@visiglobalteknologi.co.id'
