@@ -2,7 +2,8 @@
 
 return [
     'connection_status' => [
-        'request_terminate' => 'request terminate'
+        'request_terminate' => 'request terminate',
+        'disconnect' => 'disconnect'
     ],
     'seeder' => [
         'user' => [
