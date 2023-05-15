@@ -44,7 +44,7 @@ class DatabaseSeeder extends Seeder
                 'server_port' => '3387',
                 'local_port' => '3389',
                 'device_id' => $device->id,
-                'connection_status_id' => ConnectionStatus::where('name', 'not connected')->first()->id
+                'connection_status_id' => ConnectionStatus::where('name', 'disconnected')->first()->id
             ]);
         }
     }
