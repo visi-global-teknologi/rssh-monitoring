@@ -38,9 +38,6 @@ class DatabaseSeeder extends Seeder
             ]);
 
             RsshConnection::create([
-                'server_username' => 'root',
-                'server_password' => 'fJ}2nWG$yV6ocyU$',
-                'server_ip' => '66.42.49.122',
                 'server_port' => '3387',
                 'local_port' => '3389',
                 'device_id' => $device->id,

@@ -13,9 +13,6 @@ return new class extends Migration
     {
         Schema::create('rssh_connections', function (Blueprint $table) {
             $table->id();
-            $table->string('server_username');
-            $table->string('server_password')->nullable();
-            $table->string('server_ip');
             $table->string('server_port');
             $table->string('local_port');
             $table->unsignedBigInteger('device_id');

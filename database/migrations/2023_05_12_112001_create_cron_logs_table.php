@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('cron_logs', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('file_name');
             $table->text('log');
             $table->enum('is_error', ['no', 'yes'])->default('yes');
             $table->unsignedBigInteger('rssh_connection_id');

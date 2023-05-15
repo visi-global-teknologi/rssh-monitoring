@@ -14,9 +14,6 @@ use Illuminate\Database\Eloquent\Model;
  * Class RsshConnection
  *
  * @property int $id
- * @property string $server_username
- * @property string|null $server_password
- * @property string $server_ip
  * @property string $server_port
  * @property string $local_port
  * @property int $device_id
@@ -37,14 +34,7 @@ class RsshConnection extends Model
         'connection_status_id' => 'int',
     ];
 
-    protected $hidden = [
-        'server_password',
-    ];
-
     protected $fillable = [
-        'server_username',
-        'server_password',
-        'server_ip',
         'server_port',
         'local_port',
         'device_id',

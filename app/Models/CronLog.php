@@ -13,7 +13,7 @@ use Illuminate\Database\Eloquent\Model;
  * Class CronLog
  *
  * @property int $id
- * @property string $name
+ * @property string $file_name
  * @property string $log
  * @property string $is_error
  * @property int $rssh_connection_id
@@ -30,7 +30,7 @@ class CronLog extends Model
     ];
 
     protected $fillable = [
-        'name',
+        'file_name',
         'log',
         'is_error',
         'rssh_connection_id',
