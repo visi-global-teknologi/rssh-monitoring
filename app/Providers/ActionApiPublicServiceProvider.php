@@ -31,6 +31,11 @@ class ActionApiPublicServiceProvider extends ServiceProvider
             'app.action.api.public.rssh-connection.connection-status',
             \App\Actions\Api\Public\RsshConnection\ConnectionStatus\Handler::class
         );
+
+        $this->app->bind(
+            'app.action.api.public.rssh-connection.update',
+            \App\Actions\Api\Public\RsshConnection\Update\Handler::class
+        );
     }
 
     /**
