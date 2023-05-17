@@ -3,10 +3,11 @@
 return [
     'seeder' => [
         'connection_status' => [
-            'request_terminate' => 'request terminate',
             'disconnect' => 'disconnect',
             'connected' => 'connected',
-            'terminated' => 'terminated'
+            'request_terminate' => 'request terminate',
+            'pid_server_terminated' => 'pid server terminated',
+            'plink_terminated' => 'plink_terminated'
         ],
         'user' => [
             'name' => 'azil',
