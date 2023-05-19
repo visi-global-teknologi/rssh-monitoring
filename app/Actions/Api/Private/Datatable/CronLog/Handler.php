@@ -11,7 +11,17 @@ class Handler
 {
     public function handle(Request $request)
     {
-        $query = CronLog::query()->with(['rssh_connection.device.client']);
+        $query = CronLog::select(DB::raw('id, file_name, log, is_error, rssh_connection_id, created_at'))
+                ->orderBy('created_at', 'desc')
+                ->groupBy('rssh_connection_id');
+
+        // return DataTables::query(
+        //     DB::table('cron_logs')
+        //         ->orderBy('created_at', 'desc')
+		// 	    ->groupBy('rssh_connection_id')
+        // )
+        // ->toJson();
+        // $query = CronLog::query()->with(['rssh_connection.device.client'])->latest('created_at')->groupBy('rssh_connection_id');
 
         return DataTables::of($query)->toJson();
     }
