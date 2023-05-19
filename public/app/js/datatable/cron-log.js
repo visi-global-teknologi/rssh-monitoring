@@ -21,7 +21,7 @@ $(document).ready(function (e) {
             { data: "file_name", name: "file_name" },
             { data: "log", name: "log" },
             { data: "is_error", name: "is_error" },
-            { data: "created_at", name: "created_at" }
+            { data: "created_at_human_readable_formatted", name: "created_at_human_readable_formatted" }
         ],
     });
 });
