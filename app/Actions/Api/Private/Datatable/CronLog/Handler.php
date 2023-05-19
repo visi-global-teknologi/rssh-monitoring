@@ -12,7 +12,7 @@ class Handler
     {
         // $query = CronLog::query()->latest()->with(['rssh_connection.device.client'])->groupBy('rssh_connection_id');
         $query = CronLog::query()->with(['rssh_connection.device.client' => function ($q){
-            $q->orderBy('cron_logs.created_at', 'desc');
+            $q->orderBy('created_at', 'desc');
         }])->groupBy('rssh_connection_id');
 
         return DataTables::of($query)->toJson();
