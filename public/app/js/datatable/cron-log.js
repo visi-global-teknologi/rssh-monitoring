@@ -25,7 +25,11 @@ $(document).ready(function (e) {
             { data: "rssh_connection.device.name", name: "rssh_connection.device.name" },
             { data: "rssh_connection.device.unique_code", name: "rssh_connection.device.unique_code" },
             { data: "rssh_connection.device.client.name", name: "rssh_connection.device.client.name" },
-            { data: "created_at_human_readable_formatted", name: "created_at_human_readable_formatted" }
+            {
+                data: "created_at_human_readable_formatted",
+                name: "created_at_human_readable_formatted",
+                orderable: false
+            }
         ],
     });
 });
