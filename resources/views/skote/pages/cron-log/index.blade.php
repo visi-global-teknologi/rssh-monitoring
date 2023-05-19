@@ -24,10 +24,6 @@
         @endforeach
     @endif
 
-    <div class="d-flex justify-content-end align-items-center py-2">
-        <a href="#" class="btn btn-primary w-m">Create Client</a>
-    </div>
-
     <div class="row">
         <div class="col-12">
             <div class="card">
