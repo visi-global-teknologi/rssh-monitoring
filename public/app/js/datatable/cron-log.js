@@ -21,11 +21,11 @@ $(document).ready(function (e) {
             { data: "file_name", name: "file_name" },
             { data: "log", name: "log" },
             { data: "is_error", name: "is_error" },
-            { data: "created_at_human_readable_formatted", name: "created_at_human_readable_formatted" },
             { data: "rssh_connection.server_port", name: "rssh_connection.server_port" },
             { data: "device.name", name: "device.name" },
             { data: "device.unique_code", name: "device.unique_code" },
             { data: "client.name", name: "client.name" },
+            { data: "created_at_human_readable_formatted", name: "created_at_human_readable_formatted" }
         ],
     });
 });
