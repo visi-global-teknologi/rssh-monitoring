@@ -10,4 +10,7 @@ Route::group(['prefix' => 'datatables', 'as' => 'api.private.datatable.', 'middl
     Route::get('cron-log', function (Request $request) {
         return app('app.action.api.private.datatable.cron-log')->handle($request);
     })->name('cron-log');
+    Route::get('rssh-log', function (Request $request) {
+        return app('app.action.api.private.datatable.rssh-log')->handle($request);
+    })->name('rssh-log');
 });

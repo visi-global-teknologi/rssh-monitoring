@@ -9,6 +9,7 @@
                 @include('skote.menu.dashboard')
                 @include('skote.menu.client')
                 @include('skote.menu.cron-log')
+                @include('skote.menu.rssh-log')
             </ul>
         </div>
         <!-- Sidebar -->

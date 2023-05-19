@@ -23,6 +23,11 @@ class ActionApiPrivateServiceProvider extends ServiceProvider
             \App\Actions\Api\Private\Datatable\CronLog\Handler::class
         );
 
+        $this->app->bind(
+            'app.action.api.private.datatable.rssh-log',
+            \App\Actions\Api\Private\Datatable\RsshLog\Handler::class
+        );
+
         // rssh connection
 
         $this->app->bind(
