@@ -7,7 +7,7 @@ return [
             'connected' => 'connected',
             'request_terminate' => 'request terminate',
             'pid_server_terminated' => 'pid server terminated',
-            'plink_terminated' => 'plink_terminated'
+            'plink_terminated' => 'plink terminated'
         ],
         'user' => [
             'name' => 'azil',
