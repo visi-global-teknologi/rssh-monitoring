@@ -14,7 +14,7 @@ class Handler
 
         return DataTables::of($query)
             ->addColumn('created_at_human_formatted', function ($row) {
-                return $row->created_at->toFormattedDayDateString();
+                return $row->created_at->toDayDateTimeString();
             })
             ->toJson();
     }
