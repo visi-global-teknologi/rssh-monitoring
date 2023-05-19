@@ -10,8 +10,12 @@ class Handler
 {
     public function handle(Request $request)
     {
-        $query = CronLog::query();
+        $query = CronLog::query()->latest();
 
-        return DataTables::of($query)->toJson();
+        return DataTables::of($query)
+            ->addColumn('created_at_human_formatted', function ($row) {
+                return $row->created_at->toFormattedDayDateString();
+            })
+            ->toJson();
     }
 }
