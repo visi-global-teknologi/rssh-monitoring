@@ -7,6 +7,7 @@
             <ul class="metismenu list-unstyled" id="side-menu">
                 <li class="menu-title" key="t-menu">@lang('translation.Menu')</li>
                 @include('skote.menu.dashboard')
+                @include('skote.menu.client')
             </ul>
         </div>
         <!-- Sidebar -->
