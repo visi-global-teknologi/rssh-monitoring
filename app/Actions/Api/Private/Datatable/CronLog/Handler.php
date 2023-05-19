@@ -10,7 +10,7 @@ class Handler
 {
     public function handle(Request $request)
     {
-        $query = CronLog::query()->latest();
+        $query = CronLog::query()->with(['rssh_connection'])->latest();
 
         return DataTables::of($query)
             ->addColumn('created_at_human_formatted', function ($row) {
