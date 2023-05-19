@@ -11,8 +11,7 @@ class Handler
 {
     public function handle(Request $request)
     {
-        $message = CronLog::orderBy('created_at','DESC');
-        $query = DB::table(DB::raw("({$message->toSql()}) as sub"))->groupBy('rssh_connection_id');
+        $query = CronLog::selectRaw('MAX(id) as max_id')->groupBy('rssh_connection_id')->orderByDesc('max_id');
         // $query = CronLog::select(DB::raw('id, file_name, log, is_error, rssh_connection_id, created_at, max(created_at) as latest_created_at'))
         //         ->orderBy('latest_created_at', 'desc')
         //         ->groupBy('rssh_connection_id');
