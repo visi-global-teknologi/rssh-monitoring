@@ -33,6 +33,7 @@ return new class extends Migration
                 cl.log as log,
                 cl.is_error as is_error,
                 cl.file_name as file_name,
+                cl.created_at as created_at,
                 rc.id as rssh_connection_id,
                 rc.server_port as rssh_connection_server_port,
                 d.name as device_name,
@@ -47,6 +48,10 @@ return new class extends Migration
                 devices as d on rc.device_id = d.id
             JOIN
                 clients as c on d.client_id = c.id
+            GROUP BY
+                rc.id
+            ORDER BY
+                created_at desc
         SQL;
     }
 

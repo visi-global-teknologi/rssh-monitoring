@@ -6,6 +6,7 @@
 
 namespace App\Models;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 
 /**
@@ -15,6 +16,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $log
  * @property string $is_error
  * @property string $file_name
+ * @property Carbon|null $created_at
  * @property int $rssh_connection_id
  * @property string $rssh_connection_server_port
  * @property string $device_name
