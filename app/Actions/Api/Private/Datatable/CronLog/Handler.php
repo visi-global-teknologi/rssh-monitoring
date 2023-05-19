@@ -10,12 +10,8 @@ class Handler
 {
     public function handle(Request $request)
     {
-        $query = CronLog::query()->with(['rssh_connection.device.client'])->groupBy('rssh_connection_id')->orderBy('created_at', 'desc');
+        $query = CronLog::query()->with(['rssh_connection.device.client'])->orderBy('created_at', 'desc')->groupBy('rssh_connection_id');
 
-        return DataTables::of($query)
-            ->addColumn('created_at_human_formatted', function ($row) {
-                return $row->created_at->toDayDateTimeString();
-            })
-            ->toJson();
+        return DataTables::of($query)->toJson();
     }
 }
