@@ -8,6 +8,7 @@
                 <li class="menu-title" key="t-menu">@lang('translation.Menu')</li>
                 @include('skote.menu.dashboard')
                 @include('skote.menu.client')
+                @include('skote.menu.cron-log')
             </ul>
         </div>
         <!-- Sidebar -->
