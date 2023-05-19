@@ -22,9 +22,9 @@ $(document).ready(function (e) {
             { data: "log", name: "log" },
             { data: "is_error", name: "is_error" },
             { data: "rssh_connection.server_port", name: "rssh_connection.server_port" },
-            { data: "device.name", name: "device.name" },
-            { data: "device.unique_code", name: "device.unique_code" },
-            { data: "client.name", name: "client.name" },
+            { data: "rssh_connection.device.name", name: "rssh_connection.device.name" },
+            { data: "rssh_connection.device.unique_code", name: "rssh_connection.device.unique_code" },
+            { data: "rssh_connection.device.client.name", name: "rssh_connection.device.client.name" },
             { data: "created_at_human_readable_formatted", name: "created_at_human_readable_formatted" }
         ],
     });
