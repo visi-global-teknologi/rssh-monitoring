@@ -39,6 +39,10 @@
                                 <th>File Name</th>
                                 <th>Log</th>
                                 <th>Is Error ?</th>
+                                <th>Server Port</th>
+                                <th>Device Name</th>
+                                <th>Device Unique Code</th>
+                                <th>Client Name</th>
                                 <th>Created At</th>
                             </tr>
                         </thead>
