@@ -9,7 +9,7 @@ class ValidateRequest
     public static function handle(Request $request)
     {
         $request->validate([
-            'unique_code_device' => 'required|exists:devices,unique_code'
+            'unique_code_device' => 'required|exists:devices,unique_code',
         ]);
     }
 }

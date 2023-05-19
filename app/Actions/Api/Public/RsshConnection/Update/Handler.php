@@ -10,10 +10,11 @@ class Handler
     {
         try {
             $request->request->add([
-                'unique_code' => $uniqueCodeDevice
+                'unique_code' => $uniqueCodeDevice,
             ]);
             ValidateRequest::handle($request);
             UpdateData::handle($request);
+
             return response()->api(true, 200, [], 'Successfully update rssh connection status', '', '');
         } catch (\Exception $e) {
             throw new \Exception($e->getMessage());

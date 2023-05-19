@@ -12,11 +12,13 @@ class SaveData
     {
         $device = Device::where('unique_code', $request->unique_code_device)->first();
 
-        if (is_null($device))
+        if (is_null($device)) {
             throw new \Exception('device not found');
+        }
 
-        if ('no' == $device->active_status)
+        if ('no' == $device->active_status) {
             throw new \Exception('device status is non active');
+        }
 
         $pingServer = PingServer::where('device_id', $device->id)->first();
         if ($pingServer) {
@@ -25,7 +27,7 @@ class SaveData
         } else {
             PingServer::create([
                 'date_time' => now(),
-                'device_id' => $device->id
+                'device_id' => $device->id,
             ]);
         }
     }

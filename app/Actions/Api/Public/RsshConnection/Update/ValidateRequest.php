@@ -10,7 +10,7 @@ class ValidateRequest
     {
         $request->validate([
             'unique_code' => 'required|exists:devices,unique_code',
-            'status' => 'required|exists:connection_statuses,name'
+            'status' => 'required|exists:connection_statuses,name',
         ]);
     }
 }

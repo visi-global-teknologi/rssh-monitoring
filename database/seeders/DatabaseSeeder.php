@@ -4,11 +4,11 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\Models\Client;
+use App\Models\ConnectionStatus;
 use App\Models\Device;
-use Illuminate\Support\Str;
 use App\Models\RsshConnection;
 use Illuminate\Database\Seeder;
-use App\Models\ConnectionStatus;
+use Illuminate\Support\Str;
 
 class DatabaseSeeder extends Seeder
 {
@@ -33,7 +33,7 @@ class DatabaseSeeder extends Seeder
                 'server_port' => '3387',
                 'local_port' => '3389',
                 'device_id' => $device->id,
-                'connection_status_id' => ConnectionStatus::where('name', config('rssh.seeder.connection_status.disconnect'))->first()->id
+                'connection_status_id' => ConnectionStatus::where('name', config('rssh.seeder.connection_status.disconnect'))->first()->id,
             ]);
         }
     }

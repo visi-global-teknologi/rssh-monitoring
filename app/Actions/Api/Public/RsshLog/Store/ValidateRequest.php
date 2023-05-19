@@ -11,7 +11,7 @@ class ValidateRequest
         $request->validate([
             'unique_code_device' => 'required|exists:devices,unique_code',
             'log' => 'required',
-            'is_error' => 'nullable|in:no,yes'
+            'is_error' => 'nullable|in:no,yes',
         ]);
     }
 }

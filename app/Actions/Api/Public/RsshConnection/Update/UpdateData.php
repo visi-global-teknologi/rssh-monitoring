@@ -2,10 +2,10 @@
 
 namespace App\Actions\Api\Public\RsshConnection\Update;
 
-use App\Models\Device;
-use Illuminate\Http\Request;
-use App\Models\RsshConnection;
 use App\Models\ConnectionStatus;
+use App\Models\Device;
+use App\Models\RsshConnection;
+use Illuminate\Http\Request;
 
 class UpdateData
 {
@@ -15,7 +15,7 @@ class UpdateData
         $connectionStatus = ConnectionStatus::where('name', $request->status)->first();
 
         RsshConnection::where('device_id', $device->id)->update([
-            'connection_status_id' => $connectionStatus->id
+            'connection_status_id' => $connectionStatus->id,
         ]);
     }
 }
