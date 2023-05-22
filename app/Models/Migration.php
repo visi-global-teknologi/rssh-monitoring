@@ -10,24 +10,23 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  * Class Migration
- * 
+ *
  * @property int $id
  * @property string $migration
  * @property int $batch
- *
- * @package App\Models
  */
 class Migration extends Model
 {
-	protected $table = 'migrations';
-	public $timestamps = false;
+    protected $table = 'migrations';
 
-	protected $casts = [
-		'batch' => 'int'
-	];
+    public $timestamps = false;
 
-	protected $fillable = [
-		'migration',
-		'batch'
-	];
+    protected $casts = [
+        'batch' => 'int',
+    ];
+
+    protected $fillable = [
+        'migration',
+        'batch',
+    ];
 }

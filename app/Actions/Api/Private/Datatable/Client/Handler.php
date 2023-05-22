@@ -10,7 +10,7 @@ class Handler
 {
     public function handle(Request $request)
     {
-        $query = Client::query();
+        $query = Client::query()->latest();
 
         return DataTables::of($query)->toJson();
     }

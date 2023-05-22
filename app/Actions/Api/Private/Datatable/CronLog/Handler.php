@@ -10,12 +10,12 @@ class Handler
 {
     public function handle(Request $request)
     {
-        $query = CronLog::query()->with(['rssh_connection.device.client'])->latest('created_at');
+        $query = CronLog::query()->with(['rssh_connection.device.client']);
 
         return DataTables::of($query)
-        ->addColumn('created_at_human_readable_formatted', function ($row) {
-            return $row->created_at->toDayDateTimeString();
-        })
-        ->toJson();
+            ->addColumn('created_at_human_readable_formatted', function ($row) {
+                return $row->created_at->toDayDateTimeString();
+            })
+            ->toJson();
     }
 }

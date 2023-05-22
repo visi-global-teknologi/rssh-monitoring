@@ -11,7 +11,7 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  * Class CronLogView
- * 
+ *
  * @property int $id
  * @property string $log
  * @property string $is_error
@@ -23,30 +23,30 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $device_unique_code
  * @property string $device_active_status
  * @property string $client_name
- *
- * @package App\Models
  */
 class CronLogView extends Model
 {
-	protected $table = 'cron_log_view';
-	public $incrementing = false;
-	public $timestamps = false;
+    protected $table = 'cron_log_view';
 
-	protected $casts = [
-		'id' => 'int',
-		'rssh_connection_id' => 'int'
-	];
+    public $incrementing = false;
 
-	protected $fillable = [
-		'id',
-		'log',
-		'is_error',
-		'file_name',
-		'rssh_connection_id',
-		'rssh_connection_server_port',
-		'device_name',
-		'device_unique_code',
-		'device_active_status',
-		'client_name'
-	];
+    public $timestamps = false;
+
+    protected $casts = [
+        'id' => 'int',
+        'rssh_connection_id' => 'int',
+    ];
+
+    protected $fillable = [
+        'id',
+        'log',
+        'is_error',
+        'file_name',
+        'rssh_connection_id',
+        'rssh_connection_server_port',
+        'device_name',
+        'device_unique_code',
+        'device_active_status',
+        'client_name',
+    ];
 }

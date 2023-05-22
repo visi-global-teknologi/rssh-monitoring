@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Database\Migrations\Migration;
-use Illuminate\Support\Facades\DB;
 
 return new class extends Migration
 {
@@ -25,13 +24,12 @@ return new class extends Migration
     public function createView()
     {
         return <<<'SQL'
-            CREATE VIEW cron_log_view AS
+            CREATE VIEW rssh_log_view AS
             SELECT
-                cl.id as id,
-                cl.log as log,
-                cl.is_error as is_error,
-                cl.file_name as file_name,
-                cl.created_at as created_at,
+                rl.id as id,
+                rl.log as log,
+                rl.is_error as is_error,
+                rl.created_at as created_at,
                 rc.id as rssh_connection_id,
                 rc.server_port as rssh_connection_server_port,
                 d.name as device_name,
@@ -39,9 +37,9 @@ return new class extends Migration
                 d.active_status as device_active_status,
                 c.name as client_name
             FROM
-                cron_logs as cl
+                rssh_logs as rl
             JOIN
-                rssh_connections as rc on cl.rssh_connection_id = rc.id
+                rssh_connections as rc on rl.rssh_connection_id = rc.id
             JOIN
                 devices as d on rc.device_id = d.id
             JOIN
@@ -54,7 +52,7 @@ return new class extends Migration
     public function dropView()
     {
         return <<<'SQL'
-            DROP VIEW IF EXISTS `cron_log_view`
+            DROP VIEW IF EXISTS `rssh_log_view`
         SQL;
     }
 };
