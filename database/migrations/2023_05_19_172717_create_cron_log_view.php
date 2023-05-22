@@ -47,7 +47,7 @@ return new class extends Migration
             JOIN
                 clients as c on d.client_id = c.id
             ORDER BY
-                created_at desc
+                cl.created_at desc
         SQL;
     }
 
