@@ -14,11 +14,12 @@ class UpdateData
         $rsshConnection = RsshConnection::where('device_id', $request->device_id)->first();
         $connectionStatusTerminate = ConnectionStatus::where('name', config('rssh.seeder.connection_status.request_terminate'))->first();
 
-        if (is_null($connectionStatusTerminate))
+        if (is_null($connectionStatusTerminate)) {
             throw new Exception('status request terminate not found');
+        }
 
         RsshConnection::where('device_id', $request->device_id)->update([
-            'connection_status_id' => $connectionStatusTerminate->id
+            'connection_status_id' => $connectionStatusTerminate->id,
         ]);
 
         RsshLog::create([

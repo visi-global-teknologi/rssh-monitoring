@@ -14,6 +14,7 @@ class Handler
             ]);
             ValidateRequest::handle($request);
             UpdateData::handle($request);
+
             return response()->api(true, 200, [], 'Successfully send a disconnect connection request', '', '');
         } catch (\Exception $e) {
             throw new \Exception($e->getMessage());
