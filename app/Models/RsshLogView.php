@@ -11,7 +11,7 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  * Class RsshLogView
- * 
+ *
  * @property int $id
  * @property string $log
  * @property string $is_error
@@ -33,7 +33,8 @@ class RsshLogView extends Model
 
 	protected $casts = [
 		'id' => 'int',
-		'rssh_connection_id' => 'int'
+		'rssh_connection_id' => 'int',
+        'created_at' => 'datetime'
 	];
 
 	protected $fillable = [
