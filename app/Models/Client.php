@@ -15,6 +15,7 @@ use Illuminate\Database\Eloquent\Model;
  *
  * @property int $id
  * @property string $name
+ * @property string $active_status
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
  * @property Collection|Device[] $devices
@@ -25,6 +26,7 @@ class Client extends Model
 
     protected $fillable = [
         'name',
+        'active_status'
     ];
 
     public function devices()

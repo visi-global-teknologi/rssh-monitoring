@@ -11,6 +11,12 @@ class UpdateData
 {
     public static function handle(Request $request)
     {
+        $device = Device::where('id', $request->device_id)->first();
+
+        if (config('rssh.device.status.no') == $device->active_status) {
+            throw new \Exception('device status is non active');
+        }
+
         $rsshConnection = RsshConnection::where('device_id', $request->device_id)->first();
         $connectionStatusTerminate = ConnectionStatus::where('name', config('rssh.seeder.connection_status.request_terminate'))->first();
 
