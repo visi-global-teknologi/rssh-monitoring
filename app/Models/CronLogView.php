@@ -26,11 +26,11 @@ use Illuminate\Database\Eloquent\Model;
  */
 class CronLogView extends Model
 {
-    protected $table = 'cron_log_view';
-
     public $incrementing = false;
 
     public $timestamps = false;
+
+    protected $table = 'cron_log_view';
 
     protected $casts = [
         'id' => 'int',
