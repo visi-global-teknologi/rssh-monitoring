@@ -17,7 +17,7 @@ class Handler
             ValidateRequest::handle($request);
             UpdateData::handle($request);
             DB::commit();
-            return response()->api(true, 200, [], 'Successfully send a disconnect connection request', '', '');
+            return response()->api(true, 200, [], 'Successfully send a request terminate request', '', '');
         } catch (\Exception $e) {
             DB::rollback();
             throw new \Exception($e->getMessage());
