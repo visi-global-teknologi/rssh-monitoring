@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Actions\Api\Private\RsshConnection\Terminate;
+namespace App\Actions\Api\Private\RsshConnection\RequestTerminate;
 
 use Illuminate\Http\Request;
 

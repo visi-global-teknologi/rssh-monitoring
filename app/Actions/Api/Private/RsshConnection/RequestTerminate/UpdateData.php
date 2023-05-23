@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Actions\Api\Private\RsshConnection\Terminate;
+namespace App\Actions\Api\Private\RsshConnection\RequestTerminate;
 
 use App\Models\ConnectionStatus;
 use App\Models\RsshConnection;
@@ -12,9 +12,15 @@ class UpdateData
     public static function handle(Request $request)
     {
         $rsshConnection = RsshConnection::where('device_id', $request->device_id)->first();
+        $connectionStatusTerminate = ConnectionStatus::where('name', config('rssh.seeder.connection_status.request_terminate'))->first();
+
+        if (is_null($connectionStatusTerminate))
+            throw new Exception('status request terminate not found');
+
         RsshConnection::where('device_id', $request->device_id)->update([
-            'connection_status_id' => ConnectionStatus::where('name', 'request terminate')->first()->id,
+            'connection_status_id' => $connectionStatusTerminate->id
         ]);
+
         RsshLog::create([
             'log' => 'request terminate connection port '.$rsshConnection->server_port,
             'rssh_connection_id' => $rsshConnection->id,
