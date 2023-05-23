@@ -10,6 +10,7 @@
                 @include('skote.menu.client')
                 @include('skote.menu.cron-log')
                 @include('skote.menu.rssh-log')
+                @include('skote.menu.ping-server')
             </ul>
         </div>
         <!-- Sidebar -->

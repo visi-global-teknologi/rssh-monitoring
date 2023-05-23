@@ -2,7 +2,7 @@
 
 namespace App\Actions\Api\Private\Datatable\Client;
 
-use App\Models\Client;
+use App\Models\Client as ClientModel;
 use Illuminate\Http\Request;
 use Yajra\DataTables\Facades\DataTables;
 
@@ -10,7 +10,7 @@ class Handler
 {
     public function handle(Request $request)
     {
-        $query = Client::query()->latest();
+        $query = ClientModel::query()->latest();
 
         return DataTables::of($query)->toJson();
     }
