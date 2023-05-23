@@ -11,8 +11,8 @@
                 @include('skote.menu.device')
                 @include('skote.menu.cron-log')
                 @include('skote.menu.rssh-log')
-                @include('skote.menu.rssh-connection')
                 @include('skote.menu.ping-server')
+                @include('skote.menu.rssh-connection')
             </ul>
         </div>
         <!-- Sidebar -->
