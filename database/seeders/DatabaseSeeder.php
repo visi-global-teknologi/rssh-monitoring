@@ -26,7 +26,7 @@ class DatabaseSeeder extends Seeder
         if ('local' == config('app.env')) {
             $client = Client::create(config('rssh.seeder.client'));
             $deviceDataDummy = config('rssh.seeder.device');
-            $deviceDataDummy['unique_code'] = strtolower(Str::random(5));
+            $deviceDataDummy['unique_code'] = strtolower(Str::random(6));
             $deviceDataDummy['client_id'] = $client->id;
             $device = Device::create($deviceDataDummy);
             RsshConnection::create([

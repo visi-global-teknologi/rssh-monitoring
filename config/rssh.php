@@ -21,4 +21,10 @@ return [
             'description' => 'bukaka point 1',
         ],
     ],
+    'device' => [
+        'status' => [
+            'no' => 'no',
+            'yes' => 'yes',
+        ],
+    ],
 ];

@@ -16,11 +16,12 @@ class SaveData
             throw new \Exception('device not found');
         }
 
-        if ('no' == $device->active_status) {
+        if (config('rssh.device.status.no') == $device->active_status) {
             throw new \Exception('device status is non active');
         }
 
         $pingServer = PingServer::where('device_id', $device->id)->first();
+
         if ($pingServer) {
             $pingServer->date_time = now();
             $pingServer->save();
