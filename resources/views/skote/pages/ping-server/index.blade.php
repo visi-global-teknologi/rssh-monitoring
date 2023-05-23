@@ -32,9 +32,6 @@
                     <table id="ping-server-datatable" class="table table-bordered dt-responsive nowrap w-100">
                         <thead>
                             <tr>
-                                <th>Log</th>
-                                <th>Is Error ?</th>
-                                <th>Server Port</th>
                                 <th>Device Name</th>
                                 <th>Device Unique Code</th>
                                 <th>Client Name</th>

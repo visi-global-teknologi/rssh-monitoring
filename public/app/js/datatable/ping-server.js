@@ -19,32 +19,18 @@ $(document).ready(function (e) {
         },
         columns: [
             {
-                data: "log",
-                name: "log",
+                data: "device_name",
+                name: "device_name",
                 orderable: false
             },
             {
-                data: "is_error",
-                name: "is_error"
-            },
-            {
-                data: "rssh_connection.server_port",
-                name: "rssh_connection.server_port",
+                data: "device_unique_code",
+                name: "device_unique_code",
                 orderable: false
             },
             {
-                data: "rssh_connection.device.name",
-                name: "rssh_connection.device.name",
-                orderable: false
-            },
-            {
-                data: "rssh_connection.device.unique_code",
-                name: "rssh_connection.device.unique_code",
-                orderable: false
-            },
-            {
-                data: "rssh_connection.device.client.name",
-                name: "rssh_connection.device.client.name"
+                data: "client_name",
+                name: "client_name"
             },
             {
                 data: "created_at_human_readable_formatted",

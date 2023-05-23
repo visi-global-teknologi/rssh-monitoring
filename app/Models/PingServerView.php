@@ -31,7 +31,7 @@ class PingServerView extends Model
 
     protected $casts = [
         'id' => 'int',
-        'date_time' => 'datetime',
+        'created_at' => 'datetime',
         'device_id' => 'int',
     ];
 
