@@ -25,13 +25,11 @@ $(document).ready(function (e) {
             },
             {
                 data: "is_error",
-                name: "is_error",
-                orderable: false
+                name: "is_error"
             },
             {
                 data: "rssh_connection.server_port",
-                name: "rssh_connection.server_port",
-                orderable: false
+                name: "rssh_connection.server_port"
             },
             {
                 data: "rssh_connection.device.name",
@@ -45,13 +43,11 @@ $(document).ready(function (e) {
             },
             {
                 data: "rssh_connection.device.client.name",
-                name: "rssh_connection.device.client.name",
-                orderable: false
+                name: "rssh_connection.device.client.name"
             },
             {
                 data: "created_at_human_readable_formatted",
-                name: "created_at_human_readable_formatted",
-                orderable: false
+                name: "created_at_human_readable_formatted"
             }
         ],
     });

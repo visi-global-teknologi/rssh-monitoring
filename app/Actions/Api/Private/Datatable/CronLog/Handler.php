@@ -2,7 +2,7 @@
 
 namespace App\Actions\Api\Private\Datatable\CronLog;
 
-use App\Models\CronLog as CronLogModel;
+use App\Models\CronLogView;
 use Illuminate\Http\Request;
 use Yajra\DataTables\Facades\DataTables;
 
@@ -10,7 +10,7 @@ class Handler
 {
     public function handle(Request $request)
     {
-        $query = CronLogModel::query()->with(['rssh_connection.device.client'])->latest();
+        $query = CronLogView::query();
 
         return DataTables::of($query)
             ->addColumn('created_at_human_readable_formatted', function ($row) {

@@ -35,6 +35,7 @@ class CronLogView extends Model
     protected $casts = [
         'id' => 'int',
         'rssh_connection_id' => 'int',
+        'created_at' => 'datetime',
     ];
 
     protected $fillable = [

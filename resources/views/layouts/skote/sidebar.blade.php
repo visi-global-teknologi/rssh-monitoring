@@ -8,6 +8,7 @@
                 <li class="menu-title" key="t-menu">@lang('translation.Menu')</li>
                 @include('skote.menu.dashboard')
                 @include('skote.menu.client')
+                @include('skote.menu.device')
                 @include('skote.menu.cron-log')
                 @include('skote.menu.rssh-log')
                 @include('skote.menu.ping-server')

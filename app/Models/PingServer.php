@@ -24,7 +24,6 @@ class PingServer extends Model
     protected $table = 'ping_servers';
 
     protected $casts = [
-        'date_time' => 'datetime',
         'device_id' => 'int',
     ];
 

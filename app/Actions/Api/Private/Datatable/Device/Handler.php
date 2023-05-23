@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Actions\Api\Private\Datatable\PingServer;
+namespace App\Actions\Api\Private\Datatable\Device;
 
-use App\Models\PingServerView;
+use App\Models\DeviceView;
 use Illuminate\Http\Request;
 use Yajra\DataTables\Facades\DataTables;
 
@@ -10,7 +10,7 @@ class Handler
 {
     public function handle(Request $request)
     {
-        $query = PingServerView::query();
+        $query = DeviceView::query();
 
         return DataTables::of($query)
             ->addColumn('created_at_human_readable_formatted', function ($row) {
