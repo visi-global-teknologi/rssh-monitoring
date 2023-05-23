@@ -10,42 +10,39 @@ use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * Class RsshLogView
+ * Class RsshConnectionView
  *
  * @property int $id
- * @property string $log
- * @property string $is_error
- * @property Carbon|null $created_at
- * @property int $rssh_connection_id
- * @property string $rssh_connection_server_port
+ * @property string $server_port
+ * @property string $local_port
+ * @property Carbon|null $updated_at
  * @property string $device_name
  * @property string $device_unique_code
  * @property string $device_active_status
+ * @property string $connection_status_name
  * @property string $client_name
  */
-class RsshLogView extends Model
+class RsshConnectionView extends Model
 {
     public $incrementing = false;
 
     public $timestamps = false;
 
-    protected $table = 'rssh_log_view';
+    protected $table = 'rssh_connection_view';
 
     protected $casts = [
         'id' => 'int',
-        'rssh_connection_id' => 'int',
-        'created_at' => 'datetime',
+        'updated_at' => 'datetime',
     ];
 
     protected $fillable = [
         'id',
-        'log',
-        'is_error',
-        'rssh_connection_id',
-        'rssh_connection_server_port',
+        'server_port',
+        'local_port',
         'device_name',
         'device_unique_code',
         'device_active_status',
+        'connection_status_name',
         'client_name',
     ];
 }

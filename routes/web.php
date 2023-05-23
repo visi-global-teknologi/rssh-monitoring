@@ -12,3 +12,4 @@ Route::resource('clients', \App\Http\Controllers\ClientController::class);
 Route::resource('cron-logs', \App\Http\Controllers\CronLogController::class);
 Route::resource('rssh-logs', \App\Http\Controllers\RsshLogController::class);
 Route::resource('ping-servers', \App\Http\Controllers\PingServerController::class);
+Route::resource('rssh-connections', \App\Http\Controllers\RsshConnectionController::class);
