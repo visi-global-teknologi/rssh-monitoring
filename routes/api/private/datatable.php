@@ -19,4 +19,7 @@ Route::group(['prefix' => 'datatables', 'as' => 'api.private.datatable.', 'middl
     Route::get('ping-server', function (Request $request) {
         return app('app.action.api.private.datatable.ping-server')->handle($request);
     })->name('ping-server');
+    Route::get('rssh-connection', function (Request $request) {
+        return app('app.action.api.private.datatable.rssh-connection')->handle($request);
+    })->name('rssh-connection');
 });
