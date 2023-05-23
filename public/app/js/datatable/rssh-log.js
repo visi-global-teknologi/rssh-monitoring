@@ -28,22 +28,22 @@ $(document).ready(function (e) {
                 name: "is_error"
             },
             {
-                data: "rssh_connection.server_port",
-                name: "rssh_connection.server_port"
+                data: "rssh_connection_server_port",
+                name: "rssh_connection_server_port"
             },
             {
-                data: "rssh_connection.device.name",
-                name: "rssh_connection.device.name",
+                data: "device_name",
+                name: "device_name",
                 orderable: false
             },
             {
-                data: "rssh_connection.device.unique_code",
-                name: "rssh_connection.device.unique_code",
+                data: "device_unique_code",
+                name: "device_unique_code",
                 orderable: false
             },
             {
-                data: "rssh_connection.device.client.name",
-                name: "rssh_connection.device.client.name"
+                data: "client_name",
+                name: "client_name"
             },
             {
                 data: "created_at_human_readable_formatted",
