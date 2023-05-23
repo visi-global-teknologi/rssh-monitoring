@@ -7,8 +7,8 @@
         },
         "blank_line_before_statement": {
             "statements": [
-                "break", "continue", "declare", "return", "throw",
-                "try", "while", "for", "foreach", "if"
+                "break", "continue", "declare",
+                "while", "for", "foreach", "if"
             ]
         },
         "braces": {

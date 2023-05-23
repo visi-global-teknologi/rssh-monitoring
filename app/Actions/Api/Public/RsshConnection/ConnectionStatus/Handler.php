@@ -22,7 +22,6 @@ class Handler
             }
 
             $rsshConnection = RsshConnection::with(['connection_status'])->where('device_id', $device->id)->first();
-
             return response()->api(true, 200, ['connection_status' => $rsshConnection->connection_status->name], 'Successfully return data connection status', '', '');
         } catch (\Exception $e) {
             throw new \Exception($e->getMessage());

@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('file_name');
             $table->text('log');
-            $table->enum('is_error', ['no', 'yes'])->default('yes');
+            $table->enum('is_error', ['no', 'yes'])->default('no');
             $table->unsignedBigInteger('rssh_connection_id');
             $table->timestamps();
 

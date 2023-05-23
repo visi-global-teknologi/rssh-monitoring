@@ -3,6 +3,7 @@
 namespace App\Actions\Api\Private\RsshConnection\RequestTerminate;
 
 use App\Models\ConnectionStatus;
+use App\Models\Device;
 use App\Models\RsshConnection;
 use App\Models\RsshLog;
 use Illuminate\Http\Request;

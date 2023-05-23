@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('rssh_logs', function (Blueprint $table) {
             $table->id();
             $table->string('log');
-            $table->enum('is_error', ['no', 'yes'])->default('yes');
+            $table->enum('is_error', ['no', 'yes'])->default('no');
             $table->unsignedBigInteger('rssh_connection_id');
             $table->timestamps();
 

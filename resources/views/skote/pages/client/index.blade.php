@@ -37,6 +37,7 @@
                         <thead>
                             <tr>
                                 <th>Name</th>
+                                <th>Status</th>
                             </tr>
                         </thead>
                     </table>

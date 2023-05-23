@@ -26,7 +26,7 @@ class Client extends Model
 
     protected $fillable = [
         'name',
-        'active_status'
+        'active_status',
     ];
 
     public function devices()

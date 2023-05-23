@@ -19,18 +19,18 @@ return [
         'device' => [
             'name' => 'bukaka point 1',
             'description' => 'bukaka point 1',
-        ]
+        ],
     ],
     'device' => [
         'status' => [
             'no' => 'no',
             'yes' => 'yes',
-        ]
+        ],
     ],
     'client' => [
         'status' => [
             'no' => 'no',
             'yes' => 'yes',
-        ]
-    ]
+        ],
+    ],
 ];

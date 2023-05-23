@@ -10,7 +10,7 @@ class Handler
 {
     public function handle(Request $request)
     {
-        $query = RsshLog::query()->with(['rssh_connection.device.client']);
+        $query = RsshLog::query()->with(['rssh_connection.device.client'])->latest();
 
         return DataTables::of($query)
             ->addColumn('created_at_human_readable_formatted', function ($row) {
