@@ -19,7 +19,11 @@ $(document).ready(function (e) {
         },
         columns: [
             { data: "name", name: "name" },
-            { data: "active_status", name: "active_status" }
+            { data: "active_status", name: "active_status" },
+            {
+                data: "column_action",
+                orderable: false
+            }
         ],
     });
 });
