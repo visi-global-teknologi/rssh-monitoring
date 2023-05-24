@@ -13,8 +13,8 @@ class Handler
         $query = PingServerView::query();
 
         return DataTables::of($query)
-            ->addColumn('created_at_human_readable_formatted', function ($row) {
-                return $row->created_at->toDayDateTimeString();
+            ->addColumn('updated_at_human_readable_formatted', function ($row) {
+                return $row->updated_at->toDayDateTimeString();
             })
             ->toJson();
     }

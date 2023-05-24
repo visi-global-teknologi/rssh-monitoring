@@ -35,7 +35,7 @@
                                 <th>Device Name</th>
                                 <th>Device Unique Code</th>
                                 <th>Client Name</th>
-                                <th>Created At</th>
+                                <th>Updated At</th>
                             </tr>
                         </thead>
                     </table>

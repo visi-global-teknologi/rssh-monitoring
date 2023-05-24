@@ -33,8 +33,8 @@ $(document).ready(function (e) {
                 name: "client_name"
             },
             {
-                data: "created_at_human_readable_formatted",
-                name: "created_at_human_readable_formatted"
+                data: "updated_at_human_readable_formatted",
+                name: "updated_at_human_readable_formatted"
             }
         ],
     });
