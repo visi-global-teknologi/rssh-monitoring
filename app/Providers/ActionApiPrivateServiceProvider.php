@@ -49,6 +49,18 @@ class ActionApiPrivateServiceProvider extends ServiceProvider
             'app.action.api.private.rssh-connection.request-terminate',
             \App\Actions\Api\Private\RsshConnection\RequestTerminate\Handler::class
         );
+
+        // client
+
+        $this->app->bind(
+            'app.action.api.private.client.store',
+            \App\Actions\Api\Private\Client\Store\Handler::class
+        );
+
+        $this->app->bind(
+            'app.action.api.private.client.update',
+            \App\Actions\Api\Private\Client\Update\Handler::class
+        );
     }
 
     /**
