@@ -15,7 +15,8 @@ class Handler
         return DataTables::of($query)
             ->addColumn('column_action', function ($row) {
                 $routeEdit = route('clients.edit', ['client' => $row->id]);
-                return view('skote.pages.client.datatable.index.column_action', compact('routeEdit'))->render();
+                $routeDevice = route('client.devices.index', $row->id);
+                return view('skote.pages.client.datatable.index.column_action', compact('routeEdit', 'routeDevice'))->render();
             })
             ->rawColumns(['column_action'])
             ->toJson();
