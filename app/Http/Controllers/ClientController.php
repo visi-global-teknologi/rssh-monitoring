@@ -19,7 +19,7 @@ class ClientController extends Controller
      */
     public function create()
     {
-        //
+        return view('skote.pages.client.create');
     }
 
     /**
