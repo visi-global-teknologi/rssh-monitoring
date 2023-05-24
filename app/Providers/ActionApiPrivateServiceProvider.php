@@ -43,6 +43,11 @@ class ActionApiPrivateServiceProvider extends ServiceProvider
             \App\Actions\Api\Private\Datatable\RsshConnection\Handler::class
         );
 
+        $this->app->bind(
+            'app.action.api.private.datatable.client.device',
+            \App\Actions\Api\Private\Datatable\Client\Device\Handler::class
+        );
+
         // rssh connection
 
         $this->app->bind(

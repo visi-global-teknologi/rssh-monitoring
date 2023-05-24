@@ -32,6 +32,7 @@ return new class extends Migration
                 d.description as description,
                 d.active_status as active_status,
                 d.created_at as created_at,
+                c.id as client_id,
                 c.name as client_name
             FROM
                 devices as d
