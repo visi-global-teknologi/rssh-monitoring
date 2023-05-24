@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Client;
 use Illuminate\Http\Request;
 
 class ClientController extends Controller
@@ -43,7 +44,12 @@ class ClientController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        try {
+            $client = Client::where('id', $id)->firstOrFail();
+            return view('skote.pages.client.edit', compact('client'));
+        } catch (\Exception $e) {
+            return redirect()->route('clients.index')->withErrors(['message' => $e->getMessage()]);
+        }
     }
 
     /**
