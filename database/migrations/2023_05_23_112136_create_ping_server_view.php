@@ -29,7 +29,7 @@ return new class extends Migration
                 ps.id as id,
                 ps.date_time as date_time,
                 ps.device_id as device_id,
-                ps.created_at as created_at,
+                ps.updated_at as updated_at,
                 d.name as device_name,
                 d.unique_code as device_unique_code,
                 d.active_status as device_active_status,
@@ -41,7 +41,7 @@ return new class extends Migration
             JOIN
                 clients as c on d.client_id = c.id
             ORDER BY
-                ps.created_at desc
+                ps.updated_at desc
         SQL;
     }
 
