@@ -2,6 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
+use App\Models\Client;
+use App\Models\Device;
+use App\Models\CronLogView;
+use App\Models\RsshLogView;
+
 class HomeController extends Controller
 {
     /**
@@ -21,6 +27,16 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('skote.pages.home');
+        $clientsTotal = Client::count();
+        $clientsNonActiveTotal = Client::where('active_status', config('rssh.client.status.no'))->count();
+        $devicesTotal = Device::count();
+        $devicesNonActiveTotal = Device::where('active_status', config('rssh.device.status.no'))->count();
+        $cronLogsErrorToday = CronLogView::where('created_at', Carbon::today())->count();
+        $rsshLogsErrorToday = RsshLogView::where('created_at', Carbon::today())->count();
+
+        return view('skote.pages.home', compact(
+            'clientsTotal', 'clientsNonActiveTotal', 'devicesTotal',
+            'devicesNonActiveTotal', 'cronLogsErrorToday', 'rsshLogsErrorToday'
+        ));
     }
 }
