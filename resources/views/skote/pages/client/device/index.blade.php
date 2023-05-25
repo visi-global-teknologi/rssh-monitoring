@@ -40,6 +40,7 @@
                                 <th>Unique Code</th>
                                 <th>Active Status</th>
                                 <th>Description</th>
+                                <th></th>
                             </tr>
                         </thead>
                     </table>

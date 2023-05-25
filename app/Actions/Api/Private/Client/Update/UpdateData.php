@@ -6,7 +6,7 @@ use App\Models\Client;
 use App\Models\Device;
 use Illuminate\Http\Request;
 
-class SaveData
+class UpdateData
 {
     public static function handle(Request $request)
     {

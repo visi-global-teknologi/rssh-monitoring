@@ -12,6 +12,12 @@ class Handler
     {
         $query = DeviceView::query()->where('client_id', $clientId)->latest();
 
-        return DataTables::of($query)->toJson();
+        return DataTables::of($query)
+            ->addColumn('column_action', function ($row) {
+                $routeEdit = route('client.devices.edit', ['id' => $row->client_id, 'device' => $row->id]);
+                return view('skote.pages.client.device.datatable.index.column_action', compact('routeEdit'))->render();
+            })
+            ->rawColumns(['column_action'])
+            ->toJson();
     }
 }

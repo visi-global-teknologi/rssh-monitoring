@@ -34,6 +34,10 @@ $(document).ready(function (e) {
             {
                 data: "description",
                 name: "description"
+            },
+            {
+                data: "column_action",
+                orderable: false
             }
         ],
     });

@@ -12,7 +12,7 @@
 
     @component('components.breadcrumb')
         @slot('li_1') Device @endslot
-        @slot('title') Create @endslot
+        @slot('title') Edit @endslot
     @endcomponent
 
     @if ($errors->any())
@@ -29,17 +29,17 @@
             <div class="card">
                 <div class="card-body">
                     <h4 class="card-title mb-4">Device</h4>
-                    {!! Form::open(['route' => ['api.private.client.device.store', $client->id], 'method' => 'POST', 'id' => 'form-client-device-store']) !!}
+                    {!! Form::open(['route' => ['api.private.client.device.update', ['id' => $client->id, 'device' => $device->id]], 'method' => 'POST', 'id' => 'form-client-device-update']) !!}
                     <div class="row mb-4">
                         <label class="col-sm-3 col-form-label">Name</label>
                         <div class="col-sm-9">
-                            <input name="name" type="text" class="form-control" required>
+                            <input name="name" type="text" class="form-control" value="{{ $device->name }}" required>
                         </div>
                     </div>
                     <div class="row mb-4">
                         <label class="col-sm-3 col-form-label">Unique Code</label>
                         <div class="col-sm-9">
-                            <input name="unique_code" type="text" class="form-control" required>
+                            <input name="unique_code" type="text" class="form-control" value="{{ $device->unique_code }}" required>
                         </div>
                     </div>
                     <div class="row mb-4">
@@ -47,7 +47,11 @@
                         <div class="col-sm-9">
                             <select name="active_status" class="form-select">
                                 @foreach (config('rssh.device.status') as $item)
-                                    <option>{{ $item }}</option>
+                                    @if ($client->active_status == $item)
+                                        <option selected>{{ $item }}</option>
+                                    @else
+                                        <option>{{ $item }}</option>
+                                    @endif
                                 @endforeach
                             </select>
                         </div>
@@ -55,14 +59,14 @@
                     <div class="row mb-4">
                         <label class="col-sm-3 col-form-label">Description (optional)</label>
                         <div class="col-sm-9">
-                            <textarea name="description" class="form-control"></textarea>
+                            <textarea name="description" class="form-control">{{ $device->description }}</textarea>
                         </div>
                     </div>
                     <div class="row justify-content-end">
                         <div class="col-sm-9">
                             <div>
                                 <a class="btn btn-secondary w-md" href="{{ route('client.devices.index', $client->id) }}">Back</a>
-                                <button id="btn-submit-form-client-device-store" type="submit" class="btn btn-primary w-md">Save</button>
+                                <button id="btn-submit-form-client-device-update" type="submit" class="btn btn-primary w-md">Save</button>
                             </div>
                         </div>
                     </div>
@@ -88,5 +92,5 @@
 @endsection
 
 @section('script-bottom')
-    <script src="{{ URL::asset('app/js/client/device/store.js') }}"></script>
+    <script src="{{ URL::asset('app/js/client/device/update.js') }}"></script>
 @endsection

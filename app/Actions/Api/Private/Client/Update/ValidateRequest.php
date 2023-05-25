@@ -14,7 +14,7 @@ class ValidateRequest
             'active_status' => 'required|in:yes,no',
             'name' => [
                 'required',
-                Rule::unique('clients')->ignore($request->client_id, 'id'),
+                Rule::unique('clients', 'name')->ignore($request->client_id, 'id'),
             ]
         ]);
     }

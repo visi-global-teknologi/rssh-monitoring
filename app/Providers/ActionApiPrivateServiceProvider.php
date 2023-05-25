@@ -71,6 +71,11 @@ class ActionApiPrivateServiceProvider extends ServiceProvider
             'app.action.api.private.client.device.store',
             \App\Actions\Api\Private\Client\Device\Store\Handler::class
         );
+
+        $this->app->bind(
+            'app.action.api.private.client.device.update',
+            \App\Actions\Api\Private\Client\Device\Update\Handler::class
+        );
     }
 
     /**
