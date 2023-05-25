@@ -18,7 +18,10 @@ class Handler
                 $routeDevice = route('client.devices.index', $row->id);
                 return view('skote.pages.client.datatable.index.column_action', compact('routeEdit', 'routeDevice'))->render();
             })
-            ->rawColumns(['column_action'])
+            ->editColumn('active_status_html', function ($row) {
+                return view('skote.pages.client.datatable.index.column_active_status', compact('row'))->render();
+            })
+            ->rawColumns(['column_action', 'active_status_html'])
             ->toJson();
     }
 }

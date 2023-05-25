@@ -37,7 +37,7 @@
                         <thead>
                             <tr>
                                 <th>Name</th>
-                                <th>Status</th>
+                                <th>Active Status</th>
                                 <th></th>
                             </tr>
                         </thead>
