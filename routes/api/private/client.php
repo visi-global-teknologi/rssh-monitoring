@@ -10,4 +10,9 @@ Route::group(['prefix' => 'clients', 'as' => 'api.private.client.', 'middleware'
     Route::put('/{id}', function (Request $request, $id) {
         return app('app.action.api.private.client.update')->handle($request, $id);
     })->name('update');
+    Route::group(['prefix' => '/{id}/devices', 'as' => 'device.', 'middleware' => []], function () {
+        Route::post('/', function (Request $request, $id) {
+            return app('app.action.api.private.client.device.store')->handle($request, $id);
+        })->name('store');
+    });
 });

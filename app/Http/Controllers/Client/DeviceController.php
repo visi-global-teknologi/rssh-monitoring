@@ -18,7 +18,7 @@ class DeviceController extends Controller
             $clientId = $currentUri[1];
             $client = ClientModel::where('id', $clientId)->firstOrFail();
             $routeApiDatatable = route('api.private.datatable.client.device', $clientId);
-            return view('skote.pages.client.device.index', compact('routeApiDatatable'));
+            return view('skote.pages.client.device.index', compact('routeApiDatatable', 'clientId'));
         } catch (\Exception $e) {
             return redirect()->route('clients.index')->withErrors(['message' => $e->getMessage()]);
         }
@@ -29,7 +29,18 @@ class DeviceController extends Controller
      */
     public function create()
     {
-        //
+        try {
+            $currentUri = request()->segments();
+            $clientId = $currentUri[1];
+            $client = ClientModel::where('id', $clientId)->firstOrFail();
+
+            if (config('rssh.client.status.no') == $client->active_status)
+                throw new Exception("Status client must be active for this action");
+
+            return view('skote.pages.client.device.create', compact('client'));
+        } catch (\Exception $e) {
+            return redirect()->route('client.devices.index', $clientId)->withErrors(['message' => $e->getMessage()]);
+        }
     }
 
     /**
