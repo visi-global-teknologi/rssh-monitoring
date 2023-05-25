@@ -27,7 +27,7 @@ $(document).ready(function (e) {
                 name: "unique_code"
             },
             {
-                data: "active_status",
+                data: "active_status_html",
                 name: "active_status",
                 orderable: false
             },

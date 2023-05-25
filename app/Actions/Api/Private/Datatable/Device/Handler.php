@@ -16,6 +16,10 @@ class Handler
             ->addColumn('created_at_human_readable_formatted', function ($row) {
                 return $row->created_at->toDayDateTimeString();
             })
+            ->editColumn('active_status_html', function ($row) {
+                return view('skote.pages.device.datatable.index.column_active_status', compact('row'))->render();
+            })
+            ->rawColumns(['active_status_html'])
             ->toJson();
     }
 }
