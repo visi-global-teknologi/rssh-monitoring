@@ -44,7 +44,58 @@ $(document).ready(function (e) {
             {
                 data: "updated_at_human_readable_formatted",
                 name: "updated_at_human_readable_formatted"
+            },
+            {
+                data: "column_action",
+                orderable: false
             }
         ],
     });
 });
+
+$('#rssh-connection-datatable').on('click', 'button', function() {
+    var url = $(this).data('url');
+    terminatePort(url)
+});
+
+function terminatePort(url) {
+    Swal.fire({
+        title: 'Apakah anda yakin',
+        text: 'Untuk memutus koneksi port tersebut ?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Hapus',
+        cancelButtonText: 'Batal',
+        reverseButtons: true,
+        customClass: {
+            cancelButton: 'btn btn-light waves-effect',
+            confirmButton: 'btn btn-primary waves-effect waves-light'
+        },
+        preConfirm: (e) => {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    resolve();
+                }, 50);
+            });
+        }
+    }).then((result) => {
+        if (result.value) {
+            $.ajax({
+                type: 'PUT',
+                url: url,
+                success: function (response) {
+                    Swal.fire("Berhasil!", response.success_message, "success");
+                    setTimeout(function(){
+                        location.reload();
+                    }, 2000);
+                },
+                error: function (xhr, status, error) {
+                    var err = eval("(" + xhr.responseText + ")");
+                    Swal.fire({
+                        html: "<strong>Oops!</strong> " + err.error_message,
+                    });
+                }
+            })
+        }
+    })
+}

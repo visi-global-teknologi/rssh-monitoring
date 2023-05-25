@@ -38,6 +38,7 @@
                                 <th>Device Unique Code</th>
                                 <th>Client Name</th>
                                 <th>Updated At</th>
+                                <th></th>
                             </tr>
                         </thead>
                     </table>
