@@ -29,7 +29,7 @@ $(document).ready(function (e) {
                 orderable: false
             },
             {
-                data: "is_error",
+                data: "is_error_html",
                 name: "is_error"
             },
             {
