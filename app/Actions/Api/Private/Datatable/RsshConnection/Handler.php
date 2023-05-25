@@ -17,7 +17,7 @@ class Handler
                 return $row->updated_at->toDayDateTimeString();
             })
             ->addColumn('column_action', function ($row) {
-                $showButtonRequestTerminate = true;
+                $showButtonRequestTerminate = false;
                 if ($row->connection_status_name == config('rssh.seeder.connection_status.connected')) {
                     $showButtonRequestTerminate = true;
                 }
