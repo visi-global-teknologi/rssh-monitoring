@@ -53,7 +53,7 @@ $(document).ready(function (e) {
     });
 });
 
-$('#rssh-connection-datatable').on('click', 'button', function() {
+$("#rssh-connection-datatable").on("click", ".btn-danger", function () {
     var url = $(this).data('url');
     terminatePort(url)
 });
