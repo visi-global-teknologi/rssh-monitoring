@@ -12,7 +12,7 @@ class Handler
         DB::beginTransaction();
         try {
             $request->request->add([
-                'client_id' => $id
+                'client_id' => $id,
             ]);
             ValidateRequest::handle($request);
             UpdateData::handle($request);

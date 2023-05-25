@@ -14,12 +14,13 @@ class ValidateRequest
             'client_id' => 'required|exists:clients,id',
             'description' => 'nullable',
             'active_status' => 'required|in:yes,no',
-            'unique_code' => 'required|unique:devices,unique_code'
+            'unique_code' => 'required|unique:devices,unique_code',
         ]);
 
         $client = Client::where('id', $request->client_id)->first();
 
-        if (config('rssh.device.status.no') == $client->active_status)
-            throw new Exception("Status client must be active for this action");
+        if (config('rssh.device.status.no') == $client->active_status) {
+            throw new Exception('Status client must be active for this action');
+        }
     }
 }

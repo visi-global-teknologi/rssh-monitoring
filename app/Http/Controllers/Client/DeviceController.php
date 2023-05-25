@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers\Client;
 
-use App\Models\Device;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Client as ClientModel;
+use App\Models\Device;
+use Illuminate\Http\Request;
 
 class DeviceController extends Controller
 {
@@ -35,8 +35,9 @@ class DeviceController extends Controller
             $clientId = $currentUri[1];
             $client = ClientModel::where('id', $clientId)->firstOrFail();
 
-            if (config('rssh.client.status.no') == $client->active_status)
-                throw new Exception("Status client must be active for this action");
+            if (config('rssh.client.status.no') == $client->active_status) {
+                throw new Exception('Status client must be active for this action');
+            }
 
             return view('skote.pages.client.device.create', compact('client'));
         } catch (\Exception $e) {
@@ -68,12 +69,14 @@ class DeviceController extends Controller
         try {
             $currentUri = request()->segments();
             $clientId = $currentUri[1];
+            $deviceId = $currentUri[3];
             $client = ClientModel::where('id', $clientId)->firstOrFail();
 
-            if (config('rssh.client.status.no') == $client->active_status)
-                throw new Exception("Status client must be active for this action");
+            if (config('rssh.client.status.no') == $client->active_status) {
+                throw new Exception('Status client must be active for this action');
+            }
 
-            $device = Device::where('id', $id)->firstOrFail();
+            $device = Device::where('id', $deviceId)->firstOrFail();
             return view('skote.pages.client.device.edit', compact('client', 'device'));
         } catch (\Exception $e) {
             return redirect()->route('client.devices.index', $clientId)->withErrors(['message' => $e->getMessage()]);

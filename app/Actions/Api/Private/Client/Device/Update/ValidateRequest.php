@@ -26,7 +26,8 @@ class ValidateRequest
 
         $client = Client::where('id', $request->client_id)->first();
 
-        if (config('rssh.device.status.no') == $client->active_status)
-            throw new Exception("Status client must be active for this action");
+        if (config('rssh.device.status.no') == $client->active_status) {
+            throw new Exception('Status client must be active for this action');
+        }
     }
 }

@@ -20,28 +20,28 @@ use Illuminate\Database\Eloquent\Model;
  * @property Carbon|null $created_at
  * @property int $client_id
  * @property string $client_name
- *
- * @package App\Models
  */
 class DeviceView extends Model
 {
-	protected $table = 'device_view';
-	public $incrementing = false;
-	public $timestamps = false;
+    public $incrementing = false;
 
-	protected $casts = [
-		'id' => 'int',
-		'client_id' => 'int',
+    public $timestamps = false;
+
+    protected $table = 'device_view';
+
+    protected $casts = [
+        'id' => 'int',
+        'client_id' => 'int',
         'created_at' => 'datetime',
-	];
+    ];
 
-	protected $fillable = [
-		'id',
-		'name',
-		'unique_code',
-		'description',
-		'active_status',
-		'client_id',
-		'client_name'
-	];
+    protected $fillable = [
+        'id',
+        'name',
+        'unique_code',
+        'description',
+        'active_status',
+        'client_id',
+        'client_name',
+    ];
 }

@@ -30,6 +30,7 @@
                 <div class="card-body">
                     <h4 class="card-title mb-4">Device</h4>
                     {!! Form::open(['route' => ['api.private.client.device.update', ['id' => $client->id, 'device' => $device->id]], 'method' => 'POST', 'id' => 'form-client-device-update']) !!}
+                    <input type="hidden" name="_method" value="PUT" >
                     <div class="row mb-4">
                         <label class="col-sm-3 col-form-label">Name</label>
                         <div class="col-sm-9">

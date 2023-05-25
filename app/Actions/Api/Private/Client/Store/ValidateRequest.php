@@ -9,7 +9,7 @@ class ValidateRequest
     public static function handle(Request $request)
     {
         $request->validate([
-            'name' => 'required|unique:clients,name'
+            'name' => 'required|unique:clients,name',
         ]);
     }
 }

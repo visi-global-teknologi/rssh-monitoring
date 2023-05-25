@@ -10,7 +10,7 @@ class Handler
     {
         try {
             $request->request->add([
-                'client_id' => $id
+                'client_id' => $id,
             ]);
             ValidateRequest::handle($request);
             SaveData::handle($request);

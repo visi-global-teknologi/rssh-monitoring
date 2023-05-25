@@ -11,7 +11,7 @@ class Handler
         try {
             $request->request->add([
                 'client_id' => $id,
-                'device_id' => $device
+                'device_id' => $device,
             ]);
             ValidateRequest::handle($request);
             UpdateData::handle($request);
