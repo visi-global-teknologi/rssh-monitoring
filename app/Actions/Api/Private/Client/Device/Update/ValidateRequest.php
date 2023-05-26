@@ -22,6 +22,11 @@ class ValidateRequest
                 'required',
                 Rule::unique('devices', 'unique_code')->ignore($request->device_id, 'id'),
             ],
+            'server_port' => [
+                'required',
+                'numeric',
+                Rule::unique('rssh_connections', 'server_port')->ignore($request->device_id, 'device_id'),
+            ],
         ]);
 
         $client = Client::where('id', $request->client_id)->first();

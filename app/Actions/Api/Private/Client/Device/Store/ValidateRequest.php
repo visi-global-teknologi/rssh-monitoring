@@ -15,6 +15,7 @@ class ValidateRequest
             'description' => 'nullable',
             'active_status' => 'required|in:yes,no',
             'unique_code' => 'required|unique:devices,unique_code',
+            'server_port' => 'required|numeric|unique:rssh_connections,server_port',
         ]);
 
         $client = Client::where('id', $request->client_id)->first();

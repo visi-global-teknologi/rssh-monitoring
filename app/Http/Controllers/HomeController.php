@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Carbon\Carbon;
 use App\Models\Client;
-use App\Models\Device;
 use App\Models\CronLogView;
+use App\Models\Device;
 use App\Models\RsshLogView;
+use Carbon\Carbon;
 
 class HomeController extends Controller
 {

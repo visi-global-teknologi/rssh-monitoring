@@ -76,7 +76,7 @@ class DeviceController extends Controller
                 throw new Exception('Status client must be active for this action');
             }
 
-            $device = Device::where('id', $deviceId)->firstOrFail();
+            $device = Device::with(['rssh_connection'])->where('id', $deviceId)->firstOrFail();
             return view('skote.pages.client.device.edit', compact('client', 'device'));
         } catch (\Exception $e) {
             return redirect()->route('client.devices.index', $clientId)->withErrors(['message' => $e->getMessage()]);

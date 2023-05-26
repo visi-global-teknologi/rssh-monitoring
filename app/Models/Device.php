@@ -7,6 +7,7 @@
 namespace App\Models;
 
 use Carbon\Carbon;
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 
@@ -54,5 +55,21 @@ class Device extends Model
     public function rssh_connections()
     {
         return $this->hasMany(RsshConnection::class);
+    }
+
+    public function rssh_connection()
+    {
+        return $this->hasOne(RsshConnection::class);
+    }
+
+    /**
+     * Interact with the user's first name.
+     */
+    protected function uniqueCode(): Attribute
+    {
+        return Attribute::make(
+            get: fn (string $value) => $value,
+            set: fn (string $value) => strtolower($value),
+        );
     }
 }

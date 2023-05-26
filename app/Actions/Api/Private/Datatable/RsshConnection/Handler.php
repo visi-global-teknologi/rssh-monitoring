@@ -18,6 +18,7 @@ class Handler
             })
             ->addColumn('column_action', function ($row) {
                 $showButtonRequestTerminate = false;
+
                 if ($row->connection_status_name == config('rssh.seeder.connection_status.connected')) {
                     $showButtonRequestTerminate = true;
                 }

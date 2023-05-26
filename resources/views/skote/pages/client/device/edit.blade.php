@@ -44,11 +44,17 @@
                         </div>
                     </div>
                     <div class="row mb-4">
+                        <label class="col-sm-3 col-form-label">Server Port</label>
+                        <div class="col-sm-9">
+                            <input name="server_port" type="text" class="form-control" value="{{ $device->rssh_connection->server_port }}" required>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
                         <label class="col-sm-3 col-form-label">Active Status</label>
                         <div class="col-sm-9">
                             <select name="active_status" class="form-select">
                                 @foreach (config('rssh.device.status') as $item)
-                                    @if ($client->active_status == $item)
+                                    @if ($device->active_status == $item)
                                         <option selected>{{ $item }}</option>
                                     @else
                                         <option>{{ $item }}</option>

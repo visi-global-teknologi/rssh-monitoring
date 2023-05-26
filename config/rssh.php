@@ -33,4 +33,7 @@ return [
             'yes' => 'yes',
         ],
     ],
+    'rssh_connection' => [
+        'local_port' => 3389,
+    ],
 ];

@@ -21,6 +21,9 @@ $(document).ready(function (e) {
                 $('.spinner-border').hide();
                 $('#btn-submit-form-client-device-store').show();
                 Swal.fire('Yeay!', response.success_message, "success");
+                setTimeout(function() {
+                    location.reload();
+                }, 2000); // 2000 milliseconds = 2 seconds
             },
             error: function (xhr, error, code) {
                 $('.spinner-border').hide();
