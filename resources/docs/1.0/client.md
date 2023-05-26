@@ -7,9 +7,9 @@
 <a name="section-1"></a>
 ## Requirement
 
-1. windows os with enable remote desktop
+1. windows os with feature remote desktop is enable
 
-2. install the Python programming language with the latest version
+2. install the python programming language with the latest version
 
 3. installed pip with latest version
 

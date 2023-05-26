@@ -11,7 +11,7 @@
 
 1. ubuntu server os with a minimum version of 20.xx
 
-2. install the Python programming language with the latest version
+2. install the python programming language with the latest version
 
 3. installed pip with latest version
 
