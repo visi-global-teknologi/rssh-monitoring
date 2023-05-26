@@ -1,0 +1,3 @@
+- ## Installation Document
+    - [Server Side](/{{route}}/{{version}}/server)
+    - [Client Side](/{{route}}/{{version}}/client)
