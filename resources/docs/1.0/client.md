@@ -77,9 +77,9 @@ create 3 task schedule
   + Open Start, Search for `Task Scheduler` and press enters to open `Task Scheduler`.
 + Step 2
   + Right-click on the `Task Scheduler Library` and click on the `Create Task` option.
-  ![screenshot](http://rssh.la790x.xyz/docs/1.0/assets/AssetCreateTask.png)
+  ![screenshot](http://rssh.la790x.xyz/assets/docs/1.0/AssetCreateTask.png)
   + Then fill columns on tab `General` like below this
-  ![screenshot](http://rssh.la790x.xyz/docs/1.0/assets/Asset1CreateTaskRunFileBatGeneralTab.png)
+  ![screenshot](http://rssh.la790x.xyz/assets/docs/1.0/Asset1CreateTaskRunFileBatGeneralTab.png)
   + Then click tab `Actions`, next click button `new`
   + On the `New Action` windows
     + Action must be set : `Start a program`
@@ -93,23 +93,23 @@ create 3 task schedule
         # Example like this
         C:\Users\Administrator\Documents\small-tools-reverse-ssh\python\windows\client\run_file_bat.py
       ```
-    ![screenshot](http://rssh.la790x.xyz/docs/1.0/assets/Asset2CreateTaskRunFileBatActionsTab.png)
-    ![screenshot](http://rssh.la790x.xyz/docs/1.0/assets/Asset3CreateTaskRunFileBatActionsTab2.png)
+    ![screenshot](http://rssh.la790x.xyz/assets/docs/1.0/Asset2CreateTaskRunFileBatActionsTab.png)
+    ![screenshot](http://rssh.la790x.xyz/assets/docs/1.0/Asset3CreateTaskRunFileBatActionsTab2.png)
   + Next on click `Conditions` tab and follow like below this
-    ![screenshot](http://rssh.la790x.xyz/docs/1.0/assets/AssetCreateTaskConditionsTab.png)
+    ![screenshot](http://rssh.la790x.xyz/assets/docs/1.0/AssetCreateTaskConditionsTab.png)
   + Next on click `Settings` tab and follow like below this
-    ![screenshot](http://rssh.la790x.xyz/docs/1.0/assets/AssetCreateTaskSettingsTab.png)
+    ![screenshot](http://rssh.la790x.xyz/assets/docs/1.0/AssetCreateTaskSettingsTab.png)
   + Next on click `Triggers` tab and follow like below this
-    ![screenshot](http://rssh.la790x.xyz/docs/1.0/assets/AssetCreateTaskTriggersTab.png)
+    ![screenshot](http://rssh.la790x.xyz/assets/docs/1.0/AssetCreateTaskTriggersTab.png)
 
 ## TerminatePlinkExe
 + Step 1
   + Open Start, Search for `Task Scheduler` and press enters to open `Task Scheduler`.
 + Step 2
   + Right-click on the `Task Scheduler Library` and click on the `Create Task` option.
-  ![screenshot](http://rssh.la790x.xyz/docs/1.0/assets/AssetCreateTask.png)
+  ![screenshot](http://rssh.la790x.xyz/assets/docs/1.0/AssetCreateTask.png)
   + Then fill columns on tab `General` like below this
-  ![screenshot](http://rssh.la790x.xyz/docs/1.0/assets/Asset1CreateTaskTerminatePlinkExeGeneralTab.png)
+  ![screenshot](http://rssh.la790x.xyz/assets/docs/1.0/Asset1CreateTaskTerminatePlinkExeGeneralTab.png)
   + Then click tab `Actions`, next click button `new`
   + On the `New Action` windows
     + Action must be set : `Start a program`
@@ -123,23 +123,23 @@ create 3 task schedule
         # Example like this
         C:\Users\Administrator\Documents\small-tools-reverse-ssh\python\windows\client\terminate_plink.py
       ```
-    ![screenshot](http://rssh.la790x.xyz/docs/1.0/assets/Asset2CreateTaskTerminatePlinkExeActionsTab.png)
-    ![screenshot](http://rssh.la790x.xyz/docs/1.0/assets/Asset3CreateTaskTerminatePlinkExeActionsTab2.png)
+    ![screenshot](http://rssh.la790x.xyz/assets/docs/1.0/Asset2CreateTaskTerminatePlinkExeActionsTab.png)
+    ![screenshot](http://rssh.la790x.xyz/assets/docs/1.0/Asset3CreateTaskTerminatePlinkExeActionsTab2.png)
   + Next on click `Conditions` tab and follow like below this
-    ![screenshot](http://rssh.la790x.xyz/docs/1.0/assets/AssetCreateTaskConditionsTab.png)
+    ![screenshot](http://rssh.la790x.xyz/assets/docs/1.0/AssetCreateTaskConditionsTab.png)
   + Next on click `Settings` tab and follow like below this
-    ![screenshot](http://rssh.la790x.xyz/docs/1.0/assets/AssetCreateTaskSettingsTab.png)
+    ![screenshot](http://rssh.la790x.xyz/assets/docs/1.0/AssetCreateTaskSettingsTab.png)
   + Next on click `Triggers` tab and follow like below this
-    ![screenshot](http://rssh.la790x.xyz/docs/1.0/assets/AssetCreateTaskTriggersTab.png)
+    ![screenshot](http://rssh.la790x.xyz/assets/docs/1.0/AssetCreateTaskTriggersTab.png)
 
 ## PingServer
 + Step 1
   + Open Start, Search for `Task Scheduler` and press enters to open `Task Scheduler`.
 + Step 2
   + Right-click on the `Task Scheduler Library` and click on the `Create Task` option.
-  ![screenshot](http://rssh.la790x.xyz/docs/1.0/assets/AssetCreateTask.png)
+  ![screenshot](http://rssh.la790x.xyz/assets/docs/1.0/AssetCreateTask.png)
   + Then fill columns on tab `General` like below this
-  ![screenshot](http://rssh.la790x.xyz/docs/1.0/assets/Asset1CreateTaskPingServerGeneralTab.png)
+  ![screenshot](http://rssh.la790x.xyz/assets/docs/1.0/Asset1CreateTaskPingServerGeneralTab.png)
   + Then click tab `Actions`, next click button `new`
   + On the `New Action` windows
     + Action must be set : `Start a program`
@@ -153,11 +153,11 @@ create 3 task schedule
         # Example like this
         C:\Users\Administrator\Documents\small-tools-reverse-ssh\python\windows\client\ping_server.py
       ```
-    ![screenshot](http://rssh.la790x.xyz/docs/1.0/assets/Asset2CreateTaskPingServerActionsTab.png)
-    ![screenshot](http://rssh.la790x.xyz/docs/1.0/assets/Asset3CreateTaskPingServerActionsTab2.png)
+    ![screenshot](http://rssh.la790x.xyz/assets/docs/1.0/Asset2CreateTaskPingServerActionsTab.png)
+    ![screenshot](http://rssh.la790x.xyz/assets/docs/1.0/Asset3CreateTaskPingServerActionsTab2.png)
   + Next on click `Conditions` tab and follow like below this
-    ![screenshot](http://rssh.la790x.xyz/docs/1.0/assets/AssetCreateTaskConditionsTab.png)
+    ![screenshot](http://rssh.la790x.xyz/assets/docs/1.0/AssetCreateTaskConditionsTab.png)
   + Next on click `Settings` tab and follow like below this
-    ![screenshot](http://rssh.la790x.xyz/docs/1.0/assets/AssetCreateTaskSettingsTab.png)
+    ![screenshot](http://rssh.la790x.xyz/assets/docs/1.0/AssetCreateTaskSettingsTab.png)
   + Next on click `Triggers` tab and follow like below this
-    ![screenshot](http://rssh.la790x.xyz/docs/1.0/assets/AssetCreateTaskTriggersTab.png)
+    ![screenshot](http://rssh.la790x.xyz/assets/docs/1.0/AssetCreateTaskTriggersTab.png)
