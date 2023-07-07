@@ -2,15 +2,15 @@
 
 namespace App\Actions\Api\Private\Datatable\Client\Device;
 
-use App\Models\DeviceView;
 use Illuminate\Http\Request;
+use App\Models\RsshConnectionView;
 use Yajra\DataTables\Facades\DataTables;
 
 class Handler
 {
     public function handle(Request $request, $clientId)
     {
-        $query = DeviceView::query()->where('client_id', $clientId)->latest();
+        $query = RsshConnectionView::query()->where('client_id', $clientId);
 
         return DataTables::of($query)
             ->addColumn('column_action', function ($row) {

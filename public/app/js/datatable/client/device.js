@@ -19,21 +19,21 @@ $(document).ready(function (e) {
         },
         columns: [
             {
-                data: "name",
-                name: "name"
+                data: "device_name",
+                name: "device_name"
             },
             {
-                data: "unique_code",
-                name: "unique_code"
+                data: "device_unique_code",
+                name: "device_unique_code"
             },
             {
                 data: "active_status_html",
-                name: "active_status",
+                name: "device_active_status",
                 orderable: false
             },
             {
-                data: "description",
-                name: "description"
+                data: "device_description",
+                name: "device_description"
             },
             {
                 data: "column_action",

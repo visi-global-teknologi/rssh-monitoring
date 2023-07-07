@@ -1,5 +1,5 @@
-@if (config('rssh.device.status.yes') == $row->active_status)
-    <span class="badge badge-soft-success">{{ $row->active_status }}</span>
+@if (config('rssh.device.status.yes') == $row->device_active_status)
+    <span class="badge badge-soft-success">{{ $row->device_active_status }}</span>
 @else
-    <span class="badge badge-soft-danger">{{ $row->active_status }}</span>
+    <span class="badge badge-soft-danger">{{ $row->device_active_status }}</span>
 @endif

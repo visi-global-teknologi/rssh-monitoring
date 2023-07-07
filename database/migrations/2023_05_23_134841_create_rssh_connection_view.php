@@ -29,10 +29,14 @@ return new class extends Migration
                 rc.id as id,
                 rc.server_port as server_port,
                 rc.updated_at as updated_at,
+                d.id as device_id,
                 d.name as device_name,
                 d.unique_code as device_unique_code,
                 d.active_status as device_active_status,
+                d.description as device_description,
+                cs.id as connection_status_id,
                 cs.name as connection_status_name,
+                c.id as client_id,
                 c.name as client_name
             FROM
                 rssh_connections as rc
