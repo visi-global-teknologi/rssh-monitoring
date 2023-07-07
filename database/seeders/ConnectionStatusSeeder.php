@@ -16,7 +16,7 @@ class ConnectionStatusSeeder extends Seeder
 
         foreach ($names as $key => $value) {
             ConnectionStatus::create([
-                'name' => $value
+                'name' => $value,
             ]);
         }
     }

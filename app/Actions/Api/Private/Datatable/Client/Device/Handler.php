@@ -2,8 +2,8 @@
 
 namespace App\Actions\Api\Private\Datatable\Client\Device;
 
-use Illuminate\Http\Request;
 use App\Models\RsshConnectionView;
+use Illuminate\Http\Request;
 use Yajra\DataTables\Facades\DataTables;
 
 class Handler

@@ -25,8 +25,6 @@ class DeviceView extends Model
 {
     public $incrementing = false;
 
-    public $timestamps = false;
-
     protected $table = 'device_view';
 
     protected $casts = [

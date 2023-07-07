@@ -27,8 +27,6 @@ class RsshLogView extends Model
 {
     public $incrementing = false;
 
-    public $timestamps = false;
-
     protected $table = 'rssh_log_view';
 
     protected $casts = [

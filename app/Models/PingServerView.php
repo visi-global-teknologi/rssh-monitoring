@@ -25,8 +25,6 @@ class PingServerView extends Model
 {
     public $incrementing = false;
 
-    public $timestamps = false;
-
     protected $table = 'ping_server_view';
 
     protected $casts = [

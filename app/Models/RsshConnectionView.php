@@ -11,7 +11,7 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  * Class RsshConnectionView
- * 
+ *
  * @property int $id
  * @property string $server_port
  * @property Carbon|null $updated_at
@@ -24,33 +24,31 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $connection_status_name
  * @property int $client_id
  * @property string $client_name
- *
- * @package App\Models
  */
 class RsshConnectionView extends Model
 {
-	protected $table = 'rssh_connection_view';
-	public $incrementing = false;
-	public $timestamps = false;
+    public $incrementing = false;
 
-	protected $casts = [
-		'id' => 'int',
-		'device_id' => 'int',
-		'connection_status_id' => 'int',
-		'client_id' => 'int'
-	];
+    protected $table = 'rssh_connection_view';
 
-	protected $fillable = [
-		'id',
-		'server_port',
-		'device_id',
-		'device_name',
-		'device_unique_code',
-		'device_active_status',
-		'device_description',
-		'connection_status_id',
-		'connection_status_name',
-		'client_id',
-		'client_name'
-	];
+    protected $casts = [
+        'id' => 'int',
+        'device_id' => 'int',
+        'connection_status_id' => 'int',
+        'client_id' => 'int',
+    ];
+
+    protected $fillable = [
+        'id',
+        'server_port',
+        'device_id',
+        'device_name',
+        'device_unique_code',
+        'device_active_status',
+        'device_description',
+        'connection_status_id',
+        'connection_status_name',
+        'client_id',
+        'client_name',
+    ];
 }

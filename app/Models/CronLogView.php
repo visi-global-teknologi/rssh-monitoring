@@ -28,8 +28,6 @@ class CronLogView extends Model
 {
     public $incrementing = false;
 
-    public $timestamps = false;
-
     protected $table = 'cron_log_view';
 
     protected $casts = [
