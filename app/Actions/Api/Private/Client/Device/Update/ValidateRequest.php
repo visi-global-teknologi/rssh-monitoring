@@ -25,6 +25,7 @@ class ValidateRequest
             'server_port' => [
                 'required',
                 'numeric',
+                'min:1000',
                 Rule::unique('rssh_connections', 'server_port')->ignore($request->device_id, 'device_id'),
             ],
         ]);
@@ -33,6 +34,13 @@ class ValidateRequest
 
         if (config('rssh.device.status.no') == $client->active_status) {
             throw new Exception('Status client must be active for this action');
+        }
+
+        $listPortForbidden = config('rssh.rssh_connection.forbidden_port');
+        if (count($listPortForbidden) > 0) {
+            if (in_array($request->server_port, $listPortForbidden)) {
+                throw new Exception('Port is forbidden');
+            }
         }
     }
 }
