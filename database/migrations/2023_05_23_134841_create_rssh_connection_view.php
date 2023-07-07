@@ -28,7 +28,6 @@ return new class extends Migration
             SELECT
                 rc.id as id,
                 rc.server_port as server_port,
-                rc.local_port as local_port,
                 rc.updated_at as updated_at,
                 d.name as device_name,
                 d.unique_code as device_unique_code,

@@ -17,11 +17,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        $user = config('rssh.seeder.user');
-        $user['password'] = bcrypt('12345678');
-        \App\Models\User::factory()->create($user);
-
         $this->call(ConnectionStatusSeeder::class);
+        $user = config('rssh.seeder.user');
+        $user['password'] = bcrypt(config('rssh.seeder.user.password'));
+        \App\Models\User::factory()->create($user);
 
         if ('local' == config('app.env')) {
             $client = Client::create(config('rssh.seeder.client'));
@@ -31,7 +30,6 @@ class DatabaseSeeder extends Seeder
             $device = Device::create($deviceDataDummy);
             RsshConnection::create([
                 'server_port' => '3387',
-                'local_port' => '3389',
                 'device_id' => $device->id,
                 'connection_status_id' => ConnectionStatus::where('name', config('rssh.seeder.connection_status.disconnect'))->first()->id,
             ]);
