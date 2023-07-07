@@ -36,7 +36,7 @@ class DeviceController extends Controller
             $client = ClientModel::where('id', $clientId)->firstOrFail();
 
             if (config('rssh.client.status.no') == $client->active_status) {
-                throw new Exception('Status client must be active for this action');
+                throw new \Exception('Status client must be active for this action');
             }
 
             return view('skote.pages.client.device.create', compact('client'));
@@ -73,7 +73,7 @@ class DeviceController extends Controller
             $client = ClientModel::where('id', $clientId)->firstOrFail();
 
             if (config('rssh.client.status.no') == $client->active_status) {
-                throw new Exception('Status client must be active for this action');
+                throw new \Exception('Status client must be active for this action');
             }
 
             $device = Device::with(['rssh_connection'])->where('id', $deviceId)->firstOrFail();
