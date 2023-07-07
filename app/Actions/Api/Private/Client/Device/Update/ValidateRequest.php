@@ -37,6 +37,7 @@ class ValidateRequest
         }
 
         $listPortForbidden = config('rssh.rssh_connection.forbidden_port');
+
         if (count($listPortForbidden) > 0) {
             if (in_array($request->server_port, $listPortForbidden)) {
                 throw new \Exception('Port is forbidden');
