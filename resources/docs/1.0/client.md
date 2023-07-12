@@ -49,10 +49,10 @@ create file .env on windows-client directory & fill in the .env file with this
 ```bash
 UNIQUE_CODE_DEVICE=xxxx
 
-REST_API_RSSH_CONNECTION_UPDATE=http://rssh.la790x.xyz/api/public/rssh-connections/
-REST_API_RSSH_CONNECTION_STATUS=http://rssh.la790x.xyz/api/public/rssh-connections/connection-status/
-REST_API_RSSH_LOG=http://rssh.la790x.xyz/api/public/rssh-logs
-REST_API_PING=http://rssh.la790x.xyz/api/public/pings
+REST_API_RSSH_CONNECTION_UPDATE=http://xxx/api/public/rssh-connections/
+REST_API_RSSH_CONNECTION_STATUS=http://xxx/api/public/rssh-connections/connection-status/
+REST_API_RSSH_LOG=http://xxx/api/public/rssh-logs
+REST_API_PING=http://xxx/api/public/pings
 
 CMD_EXE=cmd.exe
 PLINK_EXE=plink.exe
@@ -64,7 +64,7 @@ CONNECTED_CONNECTION_STATUS="connected"
 
 ```
 
-> {primary} for value UNIQUE_CODE_DEVICE you can ask the administrator
+> {primary} for value UNIQUE_CODE_DEVICE & REST_API you can ask the administrator
 
 create 3 task schedule
 
